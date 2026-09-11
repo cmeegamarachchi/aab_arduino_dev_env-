@@ -1,0 +1,21 @@
+{
+    "name": "Arduino Uno Development",
+
+    "build": {
+        "dockerfile": "Dockerfile"
+    },
+
+    "runArgs": [
+        "--device=/dev/ttyACM0:/dev/ttyACM0"
+    ],
+
+    "remoteUser": "vscode",
+
+    "customizations": {
+        "vscode": {
+            "extensions": [
+                "ms-vscode.cpptools"
+            ]
+        }
+    }
+}
