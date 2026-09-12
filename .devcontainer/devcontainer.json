@@ -1,13 +1,20 @@
 {
-    "name": "Arduino Uno Development",
+    "name": "Arduino Uno R3 Development",
 
     "build": {
-        "dockerfile": "Dockerfile"
+        "dockerfile": "Dockerfile",
+        "context": ".."
     },
 
     "runArgs": [
         "--device=/dev/ttyACM0:/dev/ttyACM0"
     ],
+
+    "containerEnv": {
+        "ARDUINO_FQBN": "arduino:avr:uno",
+        "ARDUINO_PORT": "/dev/ttyACM0",
+        "ARDUINO_UPDATER_ENABLE_NOTIFICATION": "false"
+    },
 
     "remoteUser": "vscode",
 
@@ -15,7 +22,10 @@
         "vscode": {
             "extensions": [
                 "ms-vscode.cpptools"
-            ]
+            ],
+            "settings": {
+                "C_Cpp.intelliSenseEngine": "default"
+            }
         }
     }
 }
