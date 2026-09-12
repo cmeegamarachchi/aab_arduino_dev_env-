@@ -451,7 +451,7 @@ Assuming the Arduino appears as:
 /dev/ttyACM0
 ```
 
-run from the WSL terminal:
+run from the command terminal:
 
 ```bash
 docker run --rm \
